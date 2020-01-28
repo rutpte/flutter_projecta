@@ -4,6 +4,7 @@ import 'package:projecta/screens/authen.dart';
 //--> method main.
 void main() {
   runApp(MyApp());
+  
 }
 
 //--> state less.
