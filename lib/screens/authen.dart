@@ -8,9 +8,23 @@ class Authen extends StatefulWidget {
 class _AuthenState extends State<Authen> {
   // field
 
+  Widget userform() {
+    return Container(
+      width: 200,
+      child: TextField(),
+    );
+  }
+
   // method
   Widget showAppName() {
-    return Text("ruthe Building12");
+    return Text(
+      "ruthe Building12",
+      style: TextStyle(
+          fontSize: 30,
+          color: Colors.red.shade900,
+          fontWeight: FontWeight.bold,
+          fontStyle: FontStyle.italic),
+    );
   }
 
   Widget showLogo() {
@@ -27,7 +41,7 @@ class _AuthenState extends State<Authen> {
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: <Widget>[showLogo(), showAppName()],
+          children: <Widget>[showLogo(), showAppName(), userform()],
         ),
       ),
     );
