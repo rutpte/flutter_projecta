@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:projecta/main.dart';
+import 'package:projecta/screens/register.dart';
 import 'package:projecta/utility/my_style.dart';
 
 class Authen extends StatefulWidget {
@@ -55,7 +56,20 @@ class _AuthenState extends State<Authen> {
         'sign',
         style: TextStyle(color: Colors.black),
       ),
-      onPressed: () {},
+      onPressed: () {
+        print('you click sign up');
+
+        //--> get page register.
+        MaterialPageRoute materialPageRoute = MaterialPageRoute(
+          builder: (BuildContext buildContext){
+            return Register();
+          }
+        );
+
+        //--> call contrainner register.
+        Navigator.of(context).push(materialPageRoute);
+
+      },
     );
   }
 
